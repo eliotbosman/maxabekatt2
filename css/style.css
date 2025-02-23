@@ -1,0 +1,470 @@
+@font-face {
+    font-family: 'Akzidenz Grotesk BQ';
+    src: url('../AkzidenzGroteskBQ-MedExt.woff2') format('woff2'),
+         url('../AkzidenzGroteskBQ-MedExt.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-font: 'Akzidenz Grotesk BQ', sans-serif;
+    --primary-color: #000000;
+    --secondary-color: #FFFFFF;
+    --spacing-unit: 1rem;
+}
+
+a {
+    color: black; text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    line-height: 1.2;
+    min-height: 100vh;
+    position: relative;
+    padding: var(--spacing-unit);
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: var(--spacing-unit);
+}
+
+.product-info {
+    margin-bottom: var(--spacing-unit);
+}
+
+.product-info h1 {
+    font-size: 1rem;
+    margin-top: var(--spacing-unit);
+    text-transform: uppercase;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
+}
+
+.product-image {
+    max-width: 80%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+/* Product Details */
+.product-details {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.product-details.left {
+    left: var(--spacing-unit);
+}
+
+.product-details.right {
+    right: var(--spacing-unit);
+}
+
+.product-details p {
+    margin-bottom: var(--spacing-unit);
+}
+
+/* Product Page Specific */
+.product-page {
+    padding: calc(var(--spacing-unit) * 2);
+}
+
+.product-header {
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.product-header h1 {
+    font-size: 3rem;
+    margin: var(--spacing-unit) 0;
+}
+
+.price {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-unit);
+}
+
+.add-to-cart {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: var(--primary-font);
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.add-to-cart:hover {
+    opacity: 0.8;
+}
+
+.product-description {
+    max-width: 600px;
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.product-description p {
+    margin-bottom: var(--spacing-unit);
+    line-height: 1.4;
+}
+
+.product-gallery {
+    display: flex;
+    gap: var(--spacing-unit);
+    margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+.gallery-image {
+    width: calc(33.333% - var(--spacing-unit));
+    height: auto;
+}
+
+/* Link Styles */
+.product-link {
+    display: block;
+    cursor: pointer;
+}
+
+.product-link:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--spacing-unit);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    gap: calc(var(--spacing-unit) * 2);
+}
+
+.footer-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: var(--spacing-unit);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.logo {
+    font-size: 1.5rem;
+    text-transform: lowercase;
+    letter-spacing: -0.05rem;
+}
+
+/* Links */
+a:hover {
+    opacity: 0.8;
+}
+
+/* Info Page */
+.info-page {
+    padding: calc(var(--spacing-unit) * 4);
+}
+
+.info-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.date {
+    margin-bottom: var(--spacing-unit);
+    font-size: 0.8rem;
+}
+
+.info-header h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.info-body p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-unit);
+}
+
+/* Index Page */
+.index-page {
+    height: 100vh;
+    overflow: hidden;
+    background: white;
+}
+
+.index-header {
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.index-header h1 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-unit);
+}
+
+.category-nav {
+    display: flex;
+    gap: var(--spacing-unit);
+}
+
+.category-nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.category-nav a.active {
+    text-decoration: underline;
+}
+
+.index-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.grid-item {
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-item h2 {
+    font-family: "Akzidenz Grotesk BQ", sans-serif;
+    margin-top: 1rem;
+}
+
+.grid-item p {
+    font-family: "Akzidenz Grotesk BQ", sans-serif;
+    margin-top: 0.5rem;
+}
+
+.item-info {
+    margin-top: var(--spacing-unit);
+}
+
+.item-info h2 {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-bottom: calc(var(--spacing-unit) / 2);
+}
+
+.item-info p {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Manifesto Page */
+.manifesto-page {
+    padding: 0;
+}
+
+.manifesto-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    min-height: 100vh;
+}
+
+.manifesto-left {
+    padding: calc(var(--spacing-unit) * 2);
+    border-right: 1px solid #eee;
+}
+
+.logo-large {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.manifesto-center {
+    padding: calc(var(--spacing-unit) * 2);
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-unit);
+}
+
+.main-nav a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.manifesto-right {
+    padding: calc(var(--spacing-unit) * 2);
+    border-left: 1px solid #eee;
+}
+
+.account-section h2 {
+    margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.section {
+    margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.section h3 {
+    font-size: 0.8rem;
+    margin-bottom: var(--spacing-unit);
+}
+
+.section nav {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) / 2);
+}
+
+.section nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+/* Manifesto Grid */
+.manifesto-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    height: calc(100vh - 100px);
+}
+
+.manifesto-panel {
+    border: 1px solid #333;
+    padding: 2rem;
+}
+
+.manifesto-panel h2 {
+    font-family: "Akzidenz Grotesk BQ", sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.manifesto-panel p {
+    font-family: "Akzidenz Grotesk BQ", sans-serif;
+    line-height: 1.6;
+}
+
+/* Cart Overlay */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: orangered;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-overlay.active {
+    transform: translateY(0);
+}
+
+.cart-content {
+    flex: 1;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cart-item {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 4px;
+    color: white;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.cart-footer {
+    margin-top: 2rem;
+    text-align: right;
+    color: white;
+}
+
+.total {
+    font-family: "Akzidenz Grotesk BQ", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.checkout-button {
+    font-family: "Akzidenz Grotesk BQ", sans-serif;
+    background: black;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.cart-overlay footer {
+    margin-top: auto;
+    background: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cart-overlay footer a {
+    color: white;
+}
